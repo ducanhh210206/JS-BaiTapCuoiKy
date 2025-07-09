@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Charlotte Café</title>
+    <script src="Menu.js" defer></script>
+    <link rel="stylesheet" href="./Menu.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1 class="logo">Charlotte<br/>Café</h1>
+            <nav class="nav">
+                <a href="Home.html">HOME</a>
+                <a href="Menu.html">MENU</a>
+                <a href="About.html">ABOUT</a>
+                <a href="Gallery.html">GALLERY</a>
+                <a href="Features.html">FEATURES</a>
+                <a href="Blog.html">BLOG</a>
+                <a href="Contact.html">CONTACT</a>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+            <section class="menu-categories">
+                <h2>OUR<br>MENU</h2>
+                <p>Nunc fermentum sem at enim fringilla<br>luctus. Nunc sagittis, nibh vel elementum<br>hendrerit.</p>
+                <div class="category-buttons">
+                    <button class="menu-item" onclick="scrollToSection('breakfast')">BREAKFAST</button>
+                    <button class="menu-item" onclick="scrollToSection('omelettes')">OMELETTES</button>
+                    <button class="menu-item" onclick="scrollToSection('waffles')">WAFFLES</button>
+                    <button class="menu-item" onclick="scrollToSection('salads')">SALADS</button>
+                    <button class="menu-item" onclick="scrollToSection('burgers')">BURGERS</button>
+                    <button class="menu-item" onclick="scrollToSection('milkshakes')">MILKSHAKES</button>
+                </div>
+            </section>
+        </div>
+
+        <section class="menu-details">
+            <img src="breakfast.jpg" id="breakfast" alt="Breakfast Image" class="menu-img">
+            <a href="#breakfast" class="menu-link"></a>
+            <h2>BREAKFAST</h2>
+            <ul class="menu-list">
+                <li>
+                    <div class="menu-item-header">
+                        <span>CHICKEN FRIED STEAK & EGGS WITH GRAVY</span>
+                        <span class="price">$9.95</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item-header">
+                        <span>BACON & EGGS</span>
+                        <span class="price">$8.99</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item-header">
+                        <span>NEW YORK STEAK & EGGS</span>
+                        <span class="price">$15.99</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item-header">
+                        <span>TWO EGGS ANY STYLE, FRESH SEASONAL FRUIT</span>
+                        <span class="price">$8.99</span>
+                    </div>
+                    <p class="description">Scrambled egg whites or egg beaters also available</p>
+                </li>
+            </ul>
+
+            <img src="omelettes.jpg" id="omelettes" alt="Omelettes Image" class="menu-img">
+            <a href="#omelettes" class="menu-link"></a>
+            <h2>OMELLETTES</h2>
+            <ul class="menu-list">
+                <li>    
+                    <div class="menu-item-header">
+                        <span>SUPER VEGGIE OMELETTE</span>
+                        <span class="price">$10.50</span>
+                    </div>
+                    <p class="description">Broccoli, spinach, tomatoes, mushrooms, onionsm& cheese</p>
+                </li>
+                <li>    
+                    <div class="menu-item-header">
+                        <span>RIVIERA OMELETTE</span>
+                        <span class="price">$11.99</span>
+                    </div>
+                    <p class="description">Tomatoes, spinach, avocado, cheddar cheese</p>
+                </li>
+                <li>    
+                    <div class="menu-item-header">
+                        <span>BACON OR HAM & CHEESE OMELETTE</span>
+                        <span class="price">$9.95</span>
+                    </div>
+                </li>
+                <li>    
+                    <div class="menu-item-header">
+                        <span>SUPER OMELETTE</span>
+                        <span class="price">$10.99</span>
+                    </div>
+                    <p class="description">Ham, onions, bell peppers, Spanish sauce & cheese</p>
+                </li>
+            </ul>
+
+            <img src="waffles.jpg" id="waffles" alt="Waffles Image" class="menu-img">
+            <a href="#waffles" class="menu-link"></a>
+            <h2>WAFFLES</h2>
+            <ul class="menu-list">
+                <li>    
+                    <div class="menu-item-header">
+                        <span>FRESH STRAWEBERRY OR BLUEBERRY SPECIAL</span>
+                        <span class="price">$8.99</span>
+                    </div>
+                    <p class="description">Choice of a waffle, french toast or pancakes topped with fresh straweberries or blueberries (seasonal) & whipped cream</p>
+                </li>
+                <li>    
+                    <div class="menu-item-header">
+                        <span>WAFFLE WITH FROZEN YOGURT & FRESH FRUIT</span>
+                        <span class="price">$10.95</span>
+                    </div>
+                    <p class="description">Served with non fat frozen yogurt on top, surrounded with fresh mixed fruit & whipped cream</p>
+                </li>
+                <li>    
+                    <div class="menu-item-header">
+                        <span>CRISPY BACON WAFFLE OR BACON PANCAKES</span>
+                        <span class="price">$8.25</span>
+                    </div>
+                    <p class="description">Made with pieces of bacon inside & two slices of bacon on top</p>
+                </li>
+            </ul>
+
+            <img src="salads.jpg" id="salads" alt="Salads Image" class="menu-img">
+            <a href="#salads" class="menu-link"></a>
+            <h2>SALADS</h2>
+            <ul class="menu-list">
+                <li>    
+                    <div class="menu-item-header">
+                        <span>CHAR BROILED CHICKEN BREAST SALAD</span>
+                        <span class="price">$10.99</span>
+                    </div>
+                    <p class="description">Fresh greens, avocado, cucumber, tomato, mushrooms & red onion</p>
+                </li>
+                <li>    
+                    <div class="menu-item-header">
+                        <span>CHEF SALAD</span>
+                        <span class="price">$10.99</span>
+                    </div>
+                    <p class="description">Chopped ham or turkey, tomato, cheese, avocado & hard boiled egg</p>
+                </li>
+                <li>    
+                    <div class="menu-item-header">
+                        <span>SPINACH SALAD</span>
+                        <span class="price">$11.99</span>
+                    </div>
+                    <p class="description">Fresh spinach, char broiled chicken breast, bacon, mushrooms, hard boiled egg, caramelized pecans, feta cheese, tomatoes tossed with our raspberry vinaigrette dressing</p>
+                </li>
+                <li>    
+                    <div class="menu-item-header">
+                        <span>CESAR SALAD</span>
+                        <span class="price">$9.99</span>
+                    </div>
+                    <p class="description">Romaine lettuce, Parmesan cheese & croutons</p>
+                </li>
+            </ul>
+
+            <img src="burgers.jpg" id="burgers" alt="Burgers Image" class="menu-img">
+            <a href="#burgers" class="menu-link"></a>
+            <h2>BURGERS</h2>
+            <ul class="menu-list">
+                <li>    
+                    <div class="menu-item-header">
+                        <span>BRITISH BURGER</span>
+                        <span class="price">$8.99</span>
+                    </div>
+                    <p class="description">Burger loaded with bacon, cheese & tomatoes</p>
+                </li>
+                <li>    
+                    <div class="menu-item-header">
+                        <span>MEXI BURGER</span>
+                        <span class="price">$7.99</span>
+                    </div>
+                    <p class="description">Burger with guacamole, swiss cheese, green chiles</p>
+                </li>
+                <li>    
+                    <div class="menu-item-header">
+                        <span>HAMBURGER</span>
+                        <span class="price">$10.99</span>
+                    </div>
+                    <p class="description">Hamburger patty loaded with onion rings & bleu cheese</p>
+                </li>
+                <li>    
+                    <div class="menu-item-header">
+                        <span>FRIED EGG BURGER</span>
+                        <span class="price">$9.25</span>
+                    </div>
+                    <p class="description">Burger stacked with a fried egg, cheddar cheese, bacon & secret sauce</p>
+                </li>
+            </ul>
+
+            <img src="milkshakes.jpg" alt="Milkshakes Image" class="menu-img">
+            <a href="#milkshakes" class="menu-link"></a>
+            <h2 id="milkshakes">MILKSHAKES</h2>
+            <ul class="menu-list">
+                <li>    
+                    <div class="menu-item-header">
+                        <span>JUICES - SMALL</span>
+                        <span class="price">$2.99</span>
+                    </div>
+                    <p class="description">Fresh squeezed orange or grapefruit. Cranberry, tomato, V-8, tangerine (seasonal) or 100% pressed aplple juice</p>
+                </li>
+                <li>    
+                    <div class="menu-item-header">
+                        <span>HAWAIIAN PAPAYA</span>
+                        <span class="price">$4.99</span>
+                    </div>
+                </li>
+                <li>    
+                    <div class="menu-item-header">
+                        <span>FRESH FRUIT BOWL</span>
+                        <span class="price">$10.50</span>
+                    </div>
+                    <p class="description">Filled with seasonal fruits* - may include strawberries, pineapple, sliced banana, melon, blueberries or raspberries (seasonal*)</p>
+                </li>
+            </ul>
+
+            <button class="back-to-top" onclick="scrollToTop()">↑ Lên đầu</button>
+        </section>
+    </div>
+</body>
+</html>

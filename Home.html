@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Home.css">
+    <script src="Home.js" defer></script>
+    <title>Charlotte Café</title>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1 class="logo">Charlotte<br/>Café</h1>
+            <nav class="nav">
+                <a href="Home.html">HOME</a>
+                <a href="Menu.html">MENU</a>
+                <a href="About.html">ABOUT</a>
+                <a href="Gallery.html">GALLERY</a>
+                <a href="Features.html">FEATURES</a>
+                <a href="Blog.html">BLOG</a>
+                <a href="Contact.html">CONTACT</a>
+            </nav>
+        </aside>
+
+        <button class="hamburger">&#9776;</button>
+
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="slide1.jpg" class="slide-img" />
+                <div class="text">
+                    <h2>WE LOVE COFFEE</h2>
+                    <p>Vivamus iaculis placerat diam, laoreet posuere dui aliquet ut. Praesent lacinia eleifend eros, ac venenatis orci.</p>
+                    <button>MORE ABOUT US</button>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="slide2.jpg" class="slide-img" />
+                <div class="text">
+                    <h2>COFFEE & BREAKFAST</h2>
+                    <p>Donec fermentum eros at mauris mollis tincidunt. Sed sit amet bibendum tellus, non commodo lacus.</p>
+                    <button>SEE OUR MENU</button>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="slide3.jpg" class="slide-img" />
+                <div class="text">
+                    <h2>CATERING SERVICE</h2>
+                    <p>Aliquam erat volutpat. Morbi nisl nibh, interdum vitae ultricies vitae, lobortis sit amet tellus mauris dolor velit.</p>
+                    <button>GET AN ESTIMATE</button>
+                </div>
+            </div>
+
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+
+        <section class="right">
+            <div class="banner">
+                <img src="breakfast.jpg" alt="Breakfast"/>
+                <div class="text-overlay">
+                    <p>COME TASTE OUR</p>
+                    <h3>BREAKFAST MENU</h3>
+                </div>
+            </div>
+
+            <section class="right-lower">
+                <div class="right-low">
+                    <div class="specials">
+                        <h4>BREAKFAST<br/>SPECIAL</h4>
+                        <h6>WESTERN CROISSANT</h6>
+                        <p>Ham, green peppers, onions, on buttered croissant, with a mild chipotle sauce</p>
+
+                        <h4>LUNCH<br/>SPECIAL</h4>
+                        <h6>SAUSAGE & MONTEREY JACK QUESADILLA</h6>
+                        <p>with red & green peppers, and sides of salsa & sour cream</p>
+
+                        <h4>SOUPS</h4>
+                        <h6>TOMATO BISQUE<br/>CREAM OF POTATO</h6>
+                    </div>
+                    
+                    <div class="image-column">
+                        <div class="image-box">
+                            <img src="Pastries.jpg" alt="Pastries" />
+                            <div class="text-overlay">
+                                <p>Fresh Pastries</p>
+                                <h3>Delivered Daily</h3>
+                            </div>
+                        </div>
+
+                        <div class="image-box">
+                            <img src="Coffee.jpg" alt="Coffee" />
+                            <div class="text-overlay">
+                                <p>Fresh Roasted</p>
+                                <h3>Seasonal Coffees</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="right-row">
+                    <div class="welcome">
+                        <h3>WELCOME</h3>
+                        <hr />
+                        <p>Quisque non sapien sed ante tempor posuere nec a ante. Vestibulum ante
+                            ipsum primis in faucibus orci luctus et ultrices posuere risus cubilia...
+                        </p>
+                        <button>MORE ABOUT US</button>
+                    </div>
+
+                    <div class="gallery">
+                        <img src="Image1.jpg" alt="Making coffee" />
+                        <img src="Image2.jpg" alt="Latte art" />
+                        <img src="Image3.jpg" alt="Cafe group" />
+                        <img src="Image4.jpg" alt="Meeting" />
+                    </div>
+                </div>
+
+                <section class="desserts">
+                <div class="dessert-image">
+                    <h4>COME TASTE OUR<br><span class="highlight">SEASONAL DESSERTS</span></h4>
+                </div>
+            </section>
+
+            <section class="blog">
+                <h3>FROM THE BLOG</h3>
+                <hr class="blog-divider" />
+
+                <div class="blog-post">
+                    <img src="blog-image.jpg" alt="People in café" class="blog-img" />
+                    <div class="blog-content">
+                        <p class="blog-date">OCT 22, 2014</p>
+                        <h4 class="blog-title">STANDARD POST FORMAT WITH PREVIEW IMAGE</h4>
+                        <p class="blog-description">Etiam nunc tortor, ultrices quis turpis, tempor lacinia ligula. Sed at odio vel est lobortis eleifend...</p>
+                    </div>
+                </div>
+            </section>
+            
+            <button class="back-to-top" onclick="scrollToTop()">↑ </button>
+        </section>
+    </div>
+</body>
+</html>
