@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 12%;
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 30px 20px;
+    font-family: 'Pacifico', cursive;
+    height: 100vh;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    color: #1c1c1c;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.nav a {
+    display: block;
+    color: #e0c4a4;
+    text-decoration: none;
+    margin: 15px 0;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.main {
+    position: fixed;
+    top: 0;
+    left: 12%;
+    width: 88%;
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+}
+
+.booking-left {
+    width: 38%;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4') center/cover no-repeat;
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.booking-left h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.booking-left p {
+    max-width: 400px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.booking-right {
+    width: 50%;
+    overflow-y: auto;
+    background-color: #d3d3d3;
+    padding: 50px;
+}
+
+.booking-right h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form label {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.form-row label {
+    width: 100%;
+    font-weight: 600;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #444;
+}

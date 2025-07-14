@@ -108,13 +108,22 @@ body {
     width: 50%;
     background-color: #f7f7f7;
     padding: 40px;
+    
 }
 
 .menu-img {
-    width: 100%;
-    height: auto;
     border: 3px solid #a78b65;
     margin-bottom: 20px;
+    width: 100%;
+    height: 200px;
+    transition: transform 0.3s;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.menu-img:hover {
+    transform: scale(1.05);
 }
 
 .menu-details h3 {
@@ -144,29 +153,89 @@ body {
     margin-top: 4px;
     margin-bottom: 20px;
 }
+
+.menu-details h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 30px 0 20px;
+    position: relative;
+}
+
+.menu-details h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #b28d56;
+    margin: 10px auto 0;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
 .menu-list li {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 18px;
     font-weight: bold;
-    padding: 8px 0;
-    border-bottom: 1px dotted #999;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #444;
+}
+.name {
+    flex: 0 1 auto;
+    white-space: nowrap;
 }
 
 .price {
-    font-weight: bold;
+    flex: 0 1 auto;
+    font-size: 22px;
+    font-weight: 900;
+    white-space: nowrap;
 }
 
-.menu-toggle {
-    display: none;
+.description {
+    width: 100%;
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+    text-transform: none;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+
+.back-to-top {
+    width: 60px;
+    height: 60px;
     position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 9999;
-    background-color: transparent;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1c1c1c;
+    color: white;
     border: none;
-    font-size: 28px;
-    color: #1c1c1c;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
+    display: none; 
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
 }
 
 @media (max-width: 768px) {

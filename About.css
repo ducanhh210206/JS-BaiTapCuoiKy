@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.sidebar {
+    width: 12%;
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 30px 20px;
+    font-family: 'Pacifico', cursive;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.nav a {
+    display: block;
+    color: #e0c4a4;
+    text-decoration: none;
+    margin: 15px 0;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.main-content {
+    flex: 1;
+    background: #fff;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.about-section {
+    display: flex;
+    gap: 10px;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.about-image {
+    flex: 1;
+    background: url('slide1.jpg') no-repeat center center / cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+    height: 100vh; 
+    position: sticky;
+    top: 0;
+}
+
+.about-image h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.about-image p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.about-text {
+    flex: 1;
+    color: #333;
+    background: url('Wall.jpg') center/cover no-repeat;
+    overflow-y: auto;
+    padding-right: 20px;
+    height: 100vh;
+}
+
+.categories {
+    margin: 30px 0 20px;
+    display: flex;
+    gap: 100px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.categories span {
+    margin-right: 15px;
+    font-weight: bold;
+    color: #b1875a;
+    cursor: pointer;
+}
+
+.categories span.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.tab {
+    cursor: pointer;
+    color: #8B4513;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab:hover {
+    color: #000;
+    border-bottom: 2px solid #ccc;
+}
+
+.tab.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.barista-img {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+}
+
+.fade-in {
+    animation: fadeInText 0.3s ease;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

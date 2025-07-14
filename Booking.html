@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Booking.css">
+    <script src="./Booking.js" defer></script>
+    <title>Charlotte Café</title>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1 class="logo">Charlotte<br/>Café</h1>
+            <nav class="nav">
+                <a href="Home.html">HOME</a>
+                <a href="Menu.html">MENU</a>
+                <a href="About.html">ABOUT</a>
+                <a href="Gallery.html">GALLERY</a>
+                <a href="Blog.html">BLOG</a>
+                <a href="Booking.html">BOOKING</a>
+                <a href="Contact.html">CONTACT</a>
+            </nav>
+        </aside>
+
+        <button class="hamburger">&#9776;</button>
+
+        <section class="main">
+            <div class="booking-left">
+                <h2>BOOK<br>A TABLE</h2>
+                <p>Etiam vitae tempus lorem. Interdum et malesuada<br>fames ac ante ipsum primis in faucibus. Sed id<br>egestas mi.</p>
+            </div>
+
+            <div class="booking-right">
+                <h2>BOOK A TABLE ONLINE</h2>
+                <form>
+                    <label>Date of event</label>
+                    <select id="day"></select>
+                    <select id="month"></select>
+                    <select id="year"></select>
+
+                    <label>Time of event</label>
+                    <select id="time"></select>
+
+                    <label>Session</label>
+                    <select id="session">
+                        <option>Breakfast</option>
+                        <option>Lunch</option>
+                        <option>Dinner</option>
+                    </select>
+                    
+                    <label>Number of guests</label>
+                    <input type="number" name="guests" id="guests" min="1" max="20">
+
+                    <label>First name</label>
+                    <input type="text" name="first_name" id="first_name">
+
+                    <label>Last name</label>
+                    <input type="text" name="last_name" id="last_name">
+
+                    <label>Email address</label>
+                    <input type="email" name="email" id="email">
+
+                    <label>Phone number</label>
+                    <input type="tel" name="phone" id="phone">
+
+                    <label>Special requests</label>
+                    <textarea name="requests" id="requests"></textarea>
+
+                    <button type="submit">MAKING BOOKING</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const daySelect = document.getElementById("day");
+    for (let i = 1; i <= 31; i++) {
+        let option = document.createElement("option");
+        option.value = i.toString().padStart(2, "0");
+        option.text = i.toString().padStart(2, "0");
+        daySelect.appendChild(option);
+    }
+
+    const monthSelect = document.getElementById("month");
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+    monthNames.forEach((month, index) => {
+        let option = document.createElement("option");
+        option.value = index + 1; 
+        option.text = month;
+        monthSelect.appendChild(option);
+    });
+
+    const yearSelect = document.getElementById("year");
+    const currentYear = new Date().getFullYear();
+    for (let i = currentYear; i <= currentYear + 6; i++) {
+        let option = document.createElement("option");
+        option.value = i;
+        option.text = i;
+        yearSelect.appendChild(option);
+    }
+
+    const timeSelect = document.getElementById("time");
+    for (let h = 6; h <= 22; h++) {
+        for (let m = 0; m < 60; m += 30) {
+            let hour = h > 12 ? h - 12 : h;
+            let ampm = h < 12 ? "am" : "pm";
+            let minute = m === 0 ? "00" : m;
+            let option = document.createElement("option");
+            option.value = `${hour.toString().padStart(2, "0")}:${minute} ${ampm}`;
+            option.text = `${hour}:${minute} ${ampm}`;
+            timeSelect.appendChild(option);
+        }
+    }
+
+    daySelect.value = new Date().getDate().toString().padStart(2, "0");
+    monthSelect.value = new Date().getMonth() + 1;
+    yearSelect.value = new Date().getFullYear();
+});
+</script>
+</body>
+</html>

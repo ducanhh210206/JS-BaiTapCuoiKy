@@ -1,5 +1,5 @@
 const rightSection = document.querySelector('.right');
-    const backToTopBtn = document.querySelector('.back-to-top');
+const backToTopBtn = document.querySelector('.back-to-top');
 
     rightSection.addEventListener('scroll', () => {
         if (rightSection.scrollTop > 100) {
@@ -14,7 +14,7 @@ const rightSection = document.querySelector('.right');
     }
 
 
-    let slideIndex = 0;
+let slideIndex = 0;
 let slideTimer;
 
 function showSlides() {
